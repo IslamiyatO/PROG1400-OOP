@@ -7,7 +7,7 @@
 
             num = 123465;
 
-            // prints out hello
+            // prints out num
             System.out.println("num  = " + num);
         }
 
