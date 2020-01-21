@@ -10,7 +10,7 @@ public class FinalGrade {
 
 
         //    grade variables- make variables for all the assignments
-        float assignment;
+        float assignment = 0.0f;
 
         Scanner s = new Scanner(System.in);
 
@@ -20,28 +20,28 @@ public class FinalGrade {
         // To remove the lowest grade
         float lowest = 100.0f;
         int i = 0;
-        while (i<6){
+        while (assignment >= 0.0f){
 
-
-
-            System.out.print("Enter grade for assignment " + (i+1) + ": ");
+            System.out.print("Enter grade for assignment " + (i+1) + "(-1 to end): ");
             assignment = s.nextFloat();
 
-            finalGrade += assignment;
+            if (assignment >= 0.0f ) {
+                finalGrade += assignment;
 
-            // this will determine the lowest value
-            if (assignment < lowest) {
-                lowest = assignment;
+                // this will determine the lowest value
+                if (assignment < lowest) {
+                    lowest = assignment;
+                }
             }
             // i = i + 1;  they all mean the same..
             // i += 1;
             i++;
 
-
         }
         // same as finalGrade  = finalGrade - lowest value
         finalGrade -= lowest;
-        finalGrade /= 5.0f;
+        // subtracting 2 to account for lowest grae and -1 loop
+        finalGrade /= (i-2);
 
 
         System.out.println("Your final grade is: " + finalGrade);
