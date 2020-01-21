@@ -29,7 +29,6 @@ public class Cookies {
         System.out.print("How many cookies did you eat? ");
         int numCookies = s.nextInt();
 
-
         //    output calories consumed
         // create variable to hold number of servings
         int servingSize = cookiesInABag / servingsInBag;
@@ -38,9 +37,6 @@ public class Cookies {
         float userCalories =  userServings * servingCalories;
 
         System.out.println(name + ", you ate " + userCalories + " calories.");
-
-
-
-
+        
     }
 }

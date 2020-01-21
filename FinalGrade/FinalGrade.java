@@ -59,8 +59,8 @@ public class FinalGrade {
             if (assignment4 < lowest){
                 lowest= assignment4;
             }
-            if (assignment5 < lowest){
-                lowest= assignment5;
+            if (assignment5 < lowest) {
+                lowest = assignment5;
             }
 
             finalGrade = assignment6;
@@ -88,14 +88,11 @@ public class FinalGrade {
             //    To calculate the final grade
             //    making a comment around the assignment comments it out
             finalGrade =
-                    (assignment1 + assignment2 + assignment3 + assignment4 + assignment5  /* + assignment6 */) / 5;
+                    (assignment1 + assignment2 + assignment3 + assignment4 + assignment5  /* + assignment6 */) / 5.0f;
 
 
         }
         System.out.println("Your final grade is: " + finalGrade);
-
-
-
 
 
 
