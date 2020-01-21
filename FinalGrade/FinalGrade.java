@@ -33,7 +33,7 @@ public class FinalGrade {
             if (assignment < lowest) {
                 lowest = assignment;
             }
-            // i = i + 1;  they all mean the same
+            // i = i + 1;  they all mean the same..
             // i += 1;
             i++;
 
