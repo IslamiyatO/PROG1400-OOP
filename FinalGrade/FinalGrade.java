@@ -19,8 +19,11 @@ public class FinalGrade {
 
         // To remove the lowest grade
         float lowest = 100.0f;
+        int i = 0;
+        while (i<6){
 
-        for (int i = 0; i<6; i++) {
+
+
             System.out.print("Enter grade for assignment " + (i+1) + ": ");
             assignment = s.nextFloat();
 
@@ -30,6 +33,10 @@ public class FinalGrade {
             if (assignment < lowest) {
                 lowest = assignment;
             }
+            // i = i + 1;  they all mean the same
+            // i += 1;
+            i++;
+
 
         }
         // same as finalGrade  = finalGrade - lowest value
