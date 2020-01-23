@@ -10,23 +10,51 @@ public class FinalGrade {
 
 
         //    grade variables- as an array // create array in memory to store the data
-        float[] assignment = new float[6];
+        float[] assignments = new float[6];
 
         Scanner s = new Scanner(System.in);
 
         // loop six times to get all assignment 6 grades
-        float finalGrade = 0.0f;
+
 
         // To remove the lowest grade
+
+        for (int i = 0; i<assignments.length; i++) {
+            System.out.print("Enter grade for assignment " + (i + 1) + ":");
+            assignments[i] = s.nextFloat();
+        }
+
+        // to find the lowest grade
         float lowest = 100.0f;
-        for (int i = 0; i<6; i++) {
-            System.out.print("Enter grade for assignment " + (i + 1) + "(-1 to end): ");
-            assignment[i] = s.nextFloat();
+        int lowestIndex = 0;
+        for (int i = 0; i<assignments.length; i++) {
+            if (assignments[i] < lowest){
+                lowest = assignments[i];
+                lowestIndex = i;
+            }
 
         }
 
-        System.out.println("Your final grade is: " + finalGrade);
+        // To display all the grades
+        for (int i = 0; i<6; i++) {
+            if(i == lowestIndex){
+                System.out.println("Assignment " + (i+1) + ": " +
+                        assignments[i] + " is the lowest ( hence dropped)");
+            }
 
+        }
+        //Calculate the final grade
+        float finalGrade = 0.0f;
+        //assignments.length is to determine the size of the array
+        for (int i = 0; i<assignments.length; i++) {
+            if (i != lowestIndex) {
+                finalGrade += assignments[i];
+            }
+        }
+
+        //subtract one from the length when doing the division
+        finalGrade /= (assignments.length - 1);
+        System.out.println("Your final grade is: " + finalGrade);
 
 
     }
