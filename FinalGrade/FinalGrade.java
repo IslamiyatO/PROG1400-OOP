@@ -9,8 +9,8 @@ public class FinalGrade {
     public static void main(String[] args) {
 
 
-        //    grade variables- make variables for all the assignments
-        float assignment;
+        //    grade variables- as an array // create array in memory to store the data
+        float[] assignment = new float[6];
 
         Scanner s = new Scanner(System.in);
 
@@ -19,30 +19,11 @@ public class FinalGrade {
 
         // To remove the lowest grade
         float lowest = 100.0f;
-        int i = 0;
-        do {
-            System.out.print("Enter grade for assignment " + (i+1) + "(-1 to end): ");
-            assignment = s.nextFloat();
+        for (int i = 0; i<6; i++) {
+            System.out.print("Enter grade for assignment " + (i + 1) + "(-1 to end): ");
+            assignment[i] = s.nextFloat();
 
-            if (assignment >= 0.0f ) {
-                finalGrade += assignment;
-
-                // this will determine the lowest value
-                if (assignment < lowest) {
-                    lowest = assignment;
-                }
-            }
-            // i = i + 1;  they all mean the same..
-            // i += 1;
-            i++;
-
-        }while (assignment >= 0.0f);
-
-        // same as finalGrade  = finalGrade - lowest value
-        finalGrade -= lowest;
-        // subtracting 2 to account for lowest grae and -1 loop
-        finalGrade /= (i-2);
-
+        }
 
         System.out.println("Your final grade is: " + finalGrade);
 
