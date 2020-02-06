@@ -1,13 +1,9 @@
-package CountCharacters;
+package Basics.CountCharacters;
 
 //to access a particular letter in a string to say the number of letters in a string
 //Program that will count the number of occurrences
 //of a particular letter in a given string.
 
-import com.sun.source.util.SourcePositions;
-import jdk.swing.interop.SwingInterOpUtils;
-
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class CountCharacters {
@@ -29,7 +25,7 @@ public class CountCharacters {
 
         System.out.print("Enter a letter: ");
         String input = s.nextLine();
-        //
+
         char ch = input.charAt(0);
 
         //Loop to go thru every letter in the str,

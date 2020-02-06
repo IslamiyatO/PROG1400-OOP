@@ -1,6 +1,5 @@
-package Cookies;
+package Basics.Cookies;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Cookies {
